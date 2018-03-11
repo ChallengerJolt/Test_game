@@ -59,7 +59,7 @@ int Room0(string &playerText, int &roomNumber)
 int Room1(string &playerText, int &roomNumber)
 {
 	cout << "You awake to see you are lying in a small pool of water, your memories are fuzzy you seem to\n remember that you were looking for something but nothing else.\n";
-	while (roomNumber == 1)
+	while (roomNumber == 1)  // Loop start
 	{
 
 		cin >> playerText;
@@ -88,7 +88,7 @@ int Room1(string &playerText, int &roomNumber)
 }
 int Room2(string &playerText, int &roomNumber, bool &key1, bool &key2)
 {
-	while (roomNumber == 2)
+	while (roomNumber == 2)// Loop start
 	{
 		cin >> playerText;
 		if (playerText == "Lookaround" || playerText == "lookaround")
@@ -135,6 +135,10 @@ int Room2(string &playerText, int &roomNumber, bool &key1, bool &key2)
 		{
 			cout << "The marble door pulls quite easily despite its immense weight,\n what lies beyond is a white room with one bright blue door on the other side.\n";
 			return roomNumber = 3;
+		}
+		else if (playerText == "Goback" || playerText == "goback" || playerText == "Turnaround" || playerText == "turnaround")
+		{
+			return roomNumber = 1;
 		}
 		else if (playerText == "Quit" || playerText == "quit")
 		{
