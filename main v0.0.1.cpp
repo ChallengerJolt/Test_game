@@ -17,7 +17,7 @@ int main()
 	// Game start
 
 
-	while (playerText != "Quit") //Loop start
+	while (playerText != "Quit" || playerText == "quit") //Loop start
 	{
 		if (showIntro == true)
 		{
